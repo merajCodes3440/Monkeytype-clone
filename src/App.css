@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300&family=Roboto+Mono:wght@200;400&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300&family=Black+Ops+One&family=Roboto+Mono:wght@200;400&family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    background-color: black;
+    color:white;
+    animation:3s;
+}
+.header-main-div{
+   margin-top:50px;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   padding:20px 180px;
+}
+.header-main-div span{
+    font-size: 30px;
+    padding:10px;
+}
+.logo{
+    font-family: Black Ops One;
+}
+ /* ------------------typing-box-design-------------------------- */
+
+.typingBox-main-div{
+    margin:10px;
+    overflow: hidden;
+
+}
+.icons span{
+    font-size: 25px;
+    padding:10px;
+}
+.row-1{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0px 190px;
+}
+/* --------------------typing-area-design-------------------- */
+
+.words{
+    padding:10px 200px;
+    font-size: 2rem;
+    overflow: hidden;
+    display:flex;
+    flex-wrap: wrap;
+    color:aqua;
+    
+}
+.word{
+    margin:5px;
+    padding-right: 2px;
+   
+}
+.word span{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    color:gray ;
+}
+
+.hidden-input{
+    opacity: 0;
+}
+.current{
+    border-left:1px solid white;
+    animation: blinking 2s infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes blinking {
+    0%{ border-left-color:white }
+    25%{ border-left-color:black }
+    50%{  border-left-color:white }
+    75%{  border-left-color:black }
+    100%{  border-left-color:white } 
+ }
+ .current-right{
+    border-right:1px solid white;
+    animation: blinking 2s infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes blinking {
+    0%{ border-right-color:white }
+    25%{ border-right-color:black }
+    50%{  border-right-color:white }
+    75%{  border-right-color:black }
+    100%{  border-right-color:white } 
+ }
+ .correct{
+    color:green !important;
+ }
+ .incorrect{
+    color:red !important;
+ }
+ .testend{
+    text-align: center;
+ }
+ .modes{
+    display:flex;
+    gap:5px;
+ }
+ .timemode:hover{
+    color: green;
+    cursor: pointer;
+ }
+/* --------------
+-------------footer-design-------------------------- */
+
+.footer-main-div{
+    padding:0px 190px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center; 
+}
+.reset-section{ 
+    display:flex;
+    flex-direction: column;
+   text-align: center;
+}
+.reset-section div{
+    padding:10px;
+}
+.stats-box{
+    margin-top:40px;
+    color:white;
+    display:flex;
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.left-box{
+    margin-left:20px;
+    width:30%;
+}
+.right-box{
+    margin-right:20px;
+    width:70%;
+}
+.title{
+    font-size:20px;
+}
+.subtitle{
+    font-size: 30px;
+}
