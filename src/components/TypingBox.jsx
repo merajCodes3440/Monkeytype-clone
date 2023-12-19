@@ -109,7 +109,6 @@ const TypingBox=()=> {
     }
     if(e.keyCode===8){
       // logic for backspace
-     
       if(currCharIndex!==0){
 
         if(allCurrChars.length===currCharIndex){

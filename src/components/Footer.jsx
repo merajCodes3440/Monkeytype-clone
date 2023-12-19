@@ -1,21 +1,25 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { CiInstagram,CiLinkedin} from "react-icons/ci";
 import { FaGithub,FaRegEnvelope,FaArrowRotateRight } from "react-icons/fa6";
-import Select from "react-select";
-import { themeOptions } from '../Utils/ThemeOptions';
-import { useTheme } from '../context/ThemeContext';
+// import Select from "react-select";
+// import { themeOptions } from '../Utils/ThemeOptions';
+// import { useTheme } from '../context/ThemeContext';
 
 function Footer() {
 
-  const [value,setValue] = useState({})
+  //const [value,setValue] = useState({})
 
-  const {setTheme} =useTheme();
+ // const {setTheme} =useTheme();
 
 
-  const handleChange =(e)=>{
-       console.log(e);
-       setValue(e.value);
-       setTheme(e.value);
+  // const handleChange =(e)=>{
+  //      console.log(e);
+  //      setValue(e.value);
+  //      setTheme(e.value);
+  // }
+
+  const handelRefresh =()=>{
+     window.location.reload();
   }
   return (
     <div className='footer-main-div'>
@@ -28,7 +32,7 @@ function Footer() {
       <div className='reset-section'> 
           <div><span><FaArrowRotateRight/></span></div>
           <div>
-            <button>esc</button> <span> - res</span>
+            <button onClick={handelRefresh}>esc</button> <span> - res</span>
           </div>
           <div>
             <button>10</button>
@@ -39,15 +43,20 @@ function Footer() {
           </div>
        </div>
       <div className='theme-changer'>
-      <Select
+      {/* <Select
         value={value}
         onChange={handleChange}
         options={themeOptions}
         menuPlacement="top"
-      />
+      /> */}
+       <select name="theme" id="th">
+          <option value="th1">Green</option>
+          <option value="th2">Red</option>
+          <option value="th3">Blue</option>
+       </select>
       </div>
     </div>
   )
 }
 
-export default Footer
+export default Footer;

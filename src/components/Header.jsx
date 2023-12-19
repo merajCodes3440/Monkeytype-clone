@@ -1,6 +1,6 @@
 import React from 'react'
 import { TiKeyboard } from "react-icons/ti";
-import { TiUser } from "react-icons/ti";
+import AccountCircle from './AccountCircle';
 
 function Header() {
   return (
@@ -10,7 +10,7 @@ function Header() {
             <span><TiKeyboard/></span>
         </div>
         <div>
-          <span><TiUser/></span>
+          <span><AccountCircle/></span>
         </div>
     </div>
   )
